@@ -21,6 +21,9 @@ function HeroBackground() {
                 </div>
             </div>
             <HoverEffect>
+            <div style={{ fontFamily: 'IBMPlex, sans-serif' }}>
+              (WORK IN PROGRESS)
+            </div>
             <div style={{ fontFamily: 'SKCuber, sans-serif' }} className="absolute left-1/2 transform -translate-x-1/2 py-5 text-4xl">
                <span>WHOIS</span><a href="https://github.com/whoisleoo" className="hover:text-pink-700 hover:transition-colors">LEO</a>
             </div>
