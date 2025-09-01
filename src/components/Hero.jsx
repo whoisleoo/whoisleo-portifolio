@@ -12,7 +12,7 @@ function HeroBackground() {
         <header className="fixed top-0 left-0 right-0 z-50 p-2 m-10">
         <div className="flex justify-between items-start">
             <div className="text-xs flex items-start gap-2" style={{ fontFamily: 'IBMPlex, sans-serif' }}>
-                <img src="../../public/asterisco.svg" className="w-5 h-5 animatedLogo"></img>
+                <img src="/asterisco.svg" className="w-5 h-5 animatedLogo"></img>
                 <div>
                     Open for any
                     <div>
@@ -42,7 +42,7 @@ function HeroBackground() {
         <main className="h-screen w-full flex flex-col justify-center items-center relative">
             <HoverEffect>
             <div className="absolute inset-0 flex justify-center items-center">
-                <img src="../../public/logo.svg"  className="w-110 h-110"  alt="Background"/>
+                <img src="/logo.svg"  className="w-110 h-110"  alt="Background"/>
             </div>
             </HoverEffect>
 
