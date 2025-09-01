@@ -21,7 +21,7 @@ function HeroBackground() {
                 </div>
             </div>
             <HoverEffect>
-            <div style={{ fontFamily: 'IBMPlex, sans-serif' }}>
+            <div style={{ fontFamily: 'IBMPlex, sans-serif' }} className="absolute left-1/2 transform -translate-x-1/2">
               (WORK IN PROGRESS)
             </div>
             <div style={{ fontFamily: 'SKCuber, sans-serif' }} className="absolute left-1/2 transform -translate-x-1/2 py-5 text-4xl">
