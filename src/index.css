@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@font-face {
+        font-family: 'Roxborough';
+        src: url('../public/Roxborough\ CF.ttf') format('opentype')
+    }
+
+@font-face {
+        font-family: 'SKCuber';
+        src: url('../public/SK\ Cuber\ Expanded\ Trial\ 400.ttf') format('opentype')
+    }
+
+@font-face {
+        font-family: 'IBMPlex';
+        src: url('../public/IBMPlexMono-Regular.ttf') format('opentype')
+    }
+
+    @font-face {
+        font-family: 'SKCuberOut';
+        src: url('../public/SKCuber-ExpandedOutline.ttf') format('opentype')
+    }
+
+
+  .animatedLogo{
+    animation: spin 4s linear infinite; 
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+  }
+
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  cursor: url('../public/cursor.png'), auto;
+}
+
+
