@@ -1,4 +1,5 @@
 @import "tailwindcss";
+ 
 
 @font-face {
         font-family: 'Roxborough';
@@ -32,26 +33,63 @@
   }
 
 
+:root {
+  --cursor-default: url('/cursor.png'), auto;
+  --cursor-pointer: url('/pointerdark.png'), pointer;
+}
+
+[data-theme="dark"] {
+  --cursor-default: url('/cursor.png'), auto;
+  --cursor-pointer: url('/pointerlight.png'), pointer;
+}
+
+[data-theme="light"] {
+  --cursor-default: url('/cursorblack.png'), auto;
+  --cursor-pointer: url('/pointerdark.png'), pointer;
+}
+
 html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  cursor: url('/cursor.png'), auto;
+  cursor: var(--cursor-default);
 }
+
+
 
 
 ::selection {
-  background-color: rgb(215, 34, 67);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
 
+
 .rainbow {
-  animation: rainbow 10s linear infinite;
+  animation: rainbow 20s linear infinite;
 }
 
 @keyframes rainbow {
   0% { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }
+}
+
+::-webkit-scrollbar {
+  background-color: #000;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f2f2f;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2f2f2f;
 }
 
