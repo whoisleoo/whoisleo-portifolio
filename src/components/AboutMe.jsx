@@ -7,9 +7,9 @@ function Work() {
 
     return (
         <>
-          <section className="min-h-screen bg-black text-white py-40 px-6 relative overflow-hidden">
+          <section className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen py-40 px-6 relative overflow-hidden`}>
             <div className="text-center mb-60">
-                <h2 className="text-sm tracking-wider text-gray-400" style={{ fontFamily: 'IBMPlex, sans-serif' }}>
+                <h2 className={`text-sm tracking-wider ${isDark ? 'text-gray-400' : 'text-gray-600'}`} style={{ fontFamily: 'IBMPlex, sans-serif' }}>
                     -ABOUT ME-
                 </h2>
             </div>
@@ -55,7 +55,7 @@ function Work() {
                             <h1 className="text-8xl leading-none italic" style={{ fontFamily: 'Roxborough, sans-serif' }}>
                                 Marconato
                             </h1>
-                            <p className="text-3xl tracking-wider text-white absolute -bottom-8 left-19 whitespace-nowrap" style={{ fontFamily: 'Disket, sans-serif' }}>
+                            <p className={`text-3xl tracking-wider ${isDark ? 'text-white' : 'text-black'} absolute -bottom-8 left-19 whitespace-nowrap`} style={{ fontFamily: 'Disket, sans-serif' }}>
                                SOFTWARE DEVELOPER
                             </p>
                             </HoverEffect>
@@ -65,7 +65,7 @@ function Work() {
 
 
                 <div className="grid grid-cols-2 gap-10 items-center ml-10">
-                    <div className="flex justify-center">
+                    <div className="flex justify-center hover:cursor-none">
                         <TiltedCard
                             imageSrc="/leonardo.jpg"
                             altText="Leonardo Marconato"
@@ -84,17 +84,18 @@ function Work() {
 
                     <div className="pt-16">
                         <div className="space-y-8">
-                            <p className="text-gray-300 leading-relaxed text-xl">
+                            <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed text-xl`}>
+                                
                                 Sou um desenvolvedor que ama muito programar não tem nada melhor do que ser amigo do bernardinho kuster ragugneti.
                             </p>
                             <p 
-                                    className="text-gray-300 leading-relaxed text-xl"
+                                    className={`${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed text-xl`}
                                     
                                 >
                                     nunca me estresso. Trabalho na bmz advogados um ótimo trabalho com ótimas pessoas e gestores de Kommo! serio eles são muito bons!
                                 </p>
                                 <p 
-                                    className="text-gray-300 leading-relaxed text-xl"
+                                    className={`${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed text-xl`}
                                     
                                 >
                                     Curso engenharia de software e busco todo dia me desenvolver para ser o melhor programador do mundo inteiro.
@@ -102,7 +103,7 @@ function Work() {
                         </div>
                         <div className="pt-30 flex justify-end">
                             <HoverEffect>
-                                <button className="group flex items-center gap-3 border border-white/30 rounded-3xl px-8 py-4 hover:border-white/60 transition-all duration-300">
+                                <button className={`group flex items-center gap-3 border ${isDark ? 'border-white/30 hover:border-white/60' : 'border-black/30 hover:border-black/60'} rounded-3xl px-8 py-4 transition-all duration-300`}>
                                     <span className="tracking-wide" style={{ fontFamily: 'SKCuber, sans-serif' }}>
                                         CONTACT
                                     </span>

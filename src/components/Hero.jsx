@@ -1,5 +1,4 @@
 import HoverEffect from "./HoverEffect"
-import Particles from "./Particle"
 import { useTheme } from "../context/ThemeContext"
 
 function HeroBackground() {
@@ -29,7 +28,7 @@ function HeroBackground() {
                     <div>
                         collaborations and offers
                     </div>
-                </div>
+            </div>
             </div>
             <HoverEffect>
             <div style={{ fontFamily: 'SKCuber, sans-serif' }} className="absolute left-1/2 transform -translate-x-1/2 py-5 text-3xl flex items-start gap-2">
@@ -74,14 +73,15 @@ function HeroBackground() {
 
     <div className="text-center relative z-10 w-full flex flex-col items-center">
         <HoverEffect>
-        <h1 style={{ fontFamily: 'Roxborough, sans-serif' }} className="text-9xl mb-4 leading-none font-normal">
+        <h1 className="text-9xl mb-4 leading-none font-normal" style={{ fontFamily: 'Roxborough, sans-serif' }}>
             LEONARDO
         </h1>
         </HoverEffect>
+        
         <HoverEffect>
-        <h2 style={{ fontFamily: 'SKCuberOut, sans-serif' }} className="text-9xl leading-none font-normal">
+        <h1 className="text-9xl leading-none font-normal" style={{ fontFamily: 'SKCuberOut, sans-serif' }}>
             MARCONATO
-        </h2>
+        </h1>
         </HoverEffect>
     </div>
 </main>
