@@ -101,7 +101,10 @@ function HeroBackground() {
             
             <div class="space-y-1">
                 <div class="text-gray-500">02</div>
-                <a href="" className="hover:text-pink-700 hover:transition-colors">ABOUT</a>
+                <a href="#aboutme" className="hover:text-pink-700 hover:transition-colors" onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('aboutme')?.scrollIntoView({ behavior: 'smooth' });
+                }}>ABOUT</a>
             </div>
             
             <div class="space-y-1">

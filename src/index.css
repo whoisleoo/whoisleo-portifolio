@@ -11,6 +11,11 @@
         src: url('/SK\ Cuber\ Expanded\ Trial\ 400.ttf') format('opentype')
     }
 
+    @font-face {
+        font-family: 'Disket';
+        src: url('/Disket-Mono-Regular.ttf') format('opentype')
+    }
+
 @font-face {
         font-family: 'IBMPlex';
         src: url('/IBMPlexMono-Regular.ttf') format('opentype')
@@ -73,6 +78,23 @@ html, body, #root {
   0% { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }
 }
+
+.animate-star {
+  animation: rotate 5s linear infinite;
+}
+
+
+
+
+ @keyframes scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-scroll {
+                    animation: scroll 20s linear infinite;
+                }
+
+
 
 ::-webkit-scrollbar {
   background-color: #000;
