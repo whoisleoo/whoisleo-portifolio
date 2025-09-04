@@ -20,23 +20,23 @@ function Work() {
                     <span className="text-8xl tracking-wider mx-2">
                         WHO AM I?
                     </span>
-                    <img src={isDark ? "/estreladarkmode.svg" : "/estrelalightmode.svg"} className="w-17 h-17 mx-8"></img>
+                    <img src={isDark ? "/stardarkmode.svg" : "/starlightmode.svg"} className="w-30 h-30 mx-8"></img>
                     <span className="text-8xl tracking-wider mx-2">
                         WHO AM I?
                     </span>
-                    <img src={isDark ? "/estreladarkmode.svg" : "/estrelalightmode.svg"} className="w-17 h-17 mx-8"></img>
+                    <img src={isDark ? "/stardarkmode.svg" : "/starlightmode.svg"} className="w-30 h-30 mx-8"></img>
                     <span className="text-8xl tracking-wider mx-2">
                         WHO AM I?
                     </span>
-                    <img src={isDark ? "/estreladarkmode.svg" : "/estrelalightmode.svg"} className="w-17 h-17 mx-8"></img>
+                    <img src={isDark ? "/stardarkmode.svg" : "/starlightmode.svg"} className="w-30 h-30 mx-8"></img>
                     <span className="text-8xl tracking-wider mx-2">
                         WHO AM I?
                     </span>
-                    <img src={isDark ? "/estreladarkmode.svg" : "/estrelalightmode.svg"} className="w-17 h-17 mx-8"></img>
+                    <img src={isDark ? "/stardarkmode.svg" : "/starlightmode.svg"} className="w-30 h-30 mx-8"></img>
                     <span className="text-8xl tracking-wider mx-2">
                         WHO AM I?
                     </span>
-                    <img src={isDark ? "/estreladarkmode.svg" : "/estrelalightmode.svg"} className="w-17 h-17 mx-8"></img>
+                    <img src={isDark ? "/stardarkmode.svg" : "/starlightmode.svg"} className="w-30 h-30 mx-8"></img>
                 </div>
                 </HoverEffect>
             </div>

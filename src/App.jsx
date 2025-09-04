@@ -5,6 +5,7 @@ import './App.css'
 import HeroBackground from './components/Hero'
 import Work from './components/Works'
 import AboutMe from './components/AboutMe'
+import ContactMe from './components/ContactMe'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <HeroBackground/>
       <Work/>
       <AboutMe/>
+      <ContactMe/>
       
     </>
   )

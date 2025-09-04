@@ -75,6 +75,10 @@ html, body, #root {
   animation: rainbow 20s linear infinite;
 }
 
+.rainbow-hover:hover {
+  animation: rainbow 20s linear infinite;
+}
+
 @keyframes rainbow {
   0% { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }

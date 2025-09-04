@@ -109,7 +109,10 @@ function HeroBackground() {
             
             <div class="space-y-1">
                 <div class="text-gray-500">03</div>
-                <a href="" className="hover:text-pink-700 hover:transition-colors">CONTACT</a>
+                <a href="" className="hover:text-pink-700 hover:transition-colors" onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}>CONTACT</a>
             </div>
             
             <div class="space-y-1">
