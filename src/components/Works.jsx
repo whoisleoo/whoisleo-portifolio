@@ -35,7 +35,7 @@ function Work() {
     {
       id: 4,
       author: "WHOISLEO",
-      title: "Encurtador URL",
+      title: "ENCURTADOR URL",
       description:
         "A basic URL shortener that turns any link into a custom named URL.",
       color: [0.4, 1, 0.4],
