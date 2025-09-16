@@ -173,3 +173,5 @@ export default SplitText;
 //   textAlign="center"
 //   onLetterAnimationComplete={handleAnimationComplete}
 // />
+
+// CREDITOS REACT BITS

@@ -51,9 +51,33 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
   useEffect(() => {
     if (!ctnDom.current) return;
     const ctn = ctnDom.current;
-    const renderer = new Renderer();
-    const gl = renderer.gl;
-    gl.clearColor(1, 1, 1, 1);
+    
+    let renderer;
+    let gl;
+    
+    try {
+
+      const canvas = document.createElement('canvas');
+      const testGl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      
+      if (!testGl) {
+        console.warn('WebGL not supported, skipping background animation');
+        return;
+      }
+      
+      renderer = new Renderer({ canvas });
+      gl = renderer.gl;
+      
+      if (!gl) {
+        console.warn('Failed to initialize WebGL renderer');
+        return;
+      }
+      
+      gl.clearColor(1, 1, 1, 1);
+    } catch (error) {
+      console.warn('WebGL initialization failed:', error);
+      return;
+    }
 
     let program;
 
@@ -111,16 +135,26 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
     }
 
     return () => {
-      cancelAnimationFrame(animateId);
+      if (animateId) {
+        cancelAnimationFrame(animateId);
+      }
       window.removeEventListener('resize', resize);
-      if (mouseReact) {
+      if (mouseReact && ctn) {
         ctn.removeEventListener('mousemove', handleMouseMove);
       }
-      ctn.removeChild(gl.canvas);
-      gl.getExtension('WEBGL_lose_context')?.loseContext();
+      if (gl && gl.canvas && ctn.contains(gl.canvas)) {
+        ctn.removeChild(gl.canvas);
+      }
+      if (gl) {
+        const ext = gl.getExtension('WEBGL_lose_context');
+        if (ext) ext.loseContext();
+      }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color, speed, amplitude, mouseReact]);
 
   return <div ref={ctnDom} className="w-full h-full" {...rest} />;
 }
+
+
+// CREDITOS REACT BITS

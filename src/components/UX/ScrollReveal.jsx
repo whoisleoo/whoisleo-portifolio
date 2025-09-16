@@ -119,3 +119,5 @@ export default ScrollReveal;
 //   No! When he ate a soup made out of a poisonous mushroom?
 //   No! A man dies when he is forgotten!
 // </ScrollReveal>
+
+// CREDITOS REACT BITS

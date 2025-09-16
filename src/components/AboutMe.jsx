@@ -9,7 +9,7 @@ function Work() {
         <>
           <section className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen py-40 px-6 relative overflow-hidden`}>
             <div className="text-center mb-60">
-                <h2 className={`text-sm tracking-wider ${isDark ? 'text-gray-400' : 'text-gray-600'}`} style={{ fontFamily: 'IBMPlex, sans-serif' }}>
+                <h2 className={`text-sm tracking-wider ${isDark ? 'text-gray-400' : 'text-gray-600'}`} style={{ fontFamily: 'ppmond, sans-serif' }}>
                     -ABOUT ME-
                 </h2>
             </div>
@@ -55,7 +55,7 @@ function Work() {
                             <h1 className="text-8xl leading-none italic" style={{ fontFamily: 'Roxborough, sans-serif' }}>
                                 Marconato
                             </h1>
-                            <p className={`text-3xl tracking-wider ${isDark ? 'text-white' : 'text-black'} absolute -bottom-8 left-19 whitespace-nowrap`} style={{ fontFamily: 'Disket, sans-serif' }}>
+                            <p className={`text-3xl tracking-wider ${isDark ? 'text-white' : 'text-black'} absolute -bottom-8 left-19 whitespace-nowrap`} style={{ fontFamily: 'ppmond, sans-serif' }}>
                                SOFTWARE DEVELOPER
                             </p>
                             </HoverEffect>
@@ -65,15 +65,15 @@ function Work() {
 
 
                 <div className="grid grid-cols-2 gap-10 items-center ml-10">
-                    <div className="flex justify-center hover:cursor-none">
+                    <div className="flex justify-center hover:cursor-none hover:saturate-150 transition-all duration-300">
                         <TiltedCard
-                            imageSrc="/leonardo.jpg"
+                            imageSrc="/eudevdd.jpg"
                             altText="Leonardo Marconato"
                             captionText="STOP TOUCHING ME!"
                             containerHeight="600px"
                             containerWidth="440px"
                             imageHeight="600px"
-                            imageWidth="440px"
+                            imageWidth="470px"
                             rotateAmplitude={12}
                             scaleOnHover={0.9}
                             showMobileWarning={false}
@@ -85,21 +85,17 @@ function Work() {
                     <div className="pt-16">
                         <div className="space-y-8">
                             <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed text-xl`}>
-                                
-                                Sou um desenvolvedor que ama muito programar não tem nada melhor do que ser amigo do bernardinho kuster ragugneti.
+                                I'm an artist and full-stack developer. I started my career with the sole goal of transforming my code into art.
                             </p>
-                            <p 
+                            <p
                                     className={`${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed text-xl`}
-                                    
+
                                 >
-                                    nunca me estresso. Trabalho na bmz advogados um ótimo trabalho com ótimas pessoas e gestores de Kommo! serio eles são muito bons!
+                                    Creativity is my strong point; I always seek to solve problems using it to create innovative solutions. My curiosity drives me to experiment with different frameworks and tools, always seeking better ways to create software that makes a difference.
                                 </p>
-                                <p 
-                                    className={`${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed text-xl`}
-                                    
-                                >
-                                    Curso engenharia de software e busco todo dia me desenvolver para ser o melhor programador do mundo inteiro.
-                                </p>
+                            <p className={`${isDark ? 'text-gray-400' : 'text-gray-500'} text-lg italic text-right mt-6`}>
+                                ~ Me
+                            </p>
                         </div>
                         <div className="pt-30 flex justify-end">
                             <HoverEffect>

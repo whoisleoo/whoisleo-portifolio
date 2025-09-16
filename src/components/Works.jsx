@@ -43,15 +43,15 @@ function Work() {
         <>
            <section id="works" className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen py-20 px-6 relative overflow-hidden`}>
                 <div className={`mb-20 text-center py-12 ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
-                    <h2 style={{ fontFamily: 'IBMPlex, sans-serif' }}> 
+                    <h2 style={{ fontFamily: 'ppmond, sans-serif' }}> 
                         -SELECTED WORK-
                     </h2>
                 </div>
 
                 <div className="max-w-6xl mx-auto space-y-32 px-8">
                     {meusProjetos.map((project, index) => (
-                        <HoverEffect>
-                        <a key={project.id} href={project.link} target="_blank" rel="noopener noreferrer" className="relative block">
+                        <HoverEffect key={project.id}>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative block">
                             <div className="group cursor-pointer">
                                 <div className="mb-4">
                                     <div className="relative">

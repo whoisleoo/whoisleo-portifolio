@@ -21,7 +21,7 @@ function HeroBackground() {
       <div className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen w-full overflow-hidden`}>
         <header className="absolute top-0 left-0 right-0 z-50 p-2 m-10">
         <div className="flex justify-between items-start">
-            <div className="text-xs flex items-start gap-2" style={{ fontFamily: 'IBMPlex, sans-serif' }}>
+            <div className="text-xs flex items-start gap-2" style={{ fontFamily: 'ppmond, sans-serif' }}>
                 <img src={`${isDark ? "/asterisco.svg" : "/asteriscopreto.svg"}`} className="w-5 h-5 animatedLogo"></img>
                 <div>
                     Open for any
@@ -31,7 +31,7 @@ function HeroBackground() {
             </div>
             </div>
             <HoverEffect>
-            <div style={{ fontFamily: 'SKCuber, sans-serif' }} className="absolute left-1/2 transform -translate-x-1/2 py-5 text-3xl flex items-start gap-2">
+            <div style={{ fontFamily: 'Croco, sans-serif' }} className="absolute left-1/2 transform -translate-x-1/2 py-5 text-3xl flex items-start gap-2">
                <div>
                    <span>WHOIS</span><a href="https://github.com/whoisleoo" className="hover:text-pink-700 hover:transition-colors">LEO</a>
                </div>
@@ -51,7 +51,7 @@ function HeroBackground() {
                     )}
                     
                 </button>
-                <div>
+                <div style={{ fontFamily: 'ppmond, sans-serif' }}>
                     Folio
                     <div className="ml-3">
                         Vol.1 —
@@ -89,37 +89,37 @@ function HeroBackground() {
 
 
 
-<footer class="absolute bottom-0 left-0 right-0 z-50 m-5 p-7" style={{ fontFamily: 'IBMPlex, sans-serif' }}>
-        <div class="flex justify-between items-end text-xs">
-            <div class="space-y-1">
-                <div class="text-gray-500">01</div>
+<footer className="absolute bottom-0 left-0 right-0 z-50 m-5 p-7" style={{ fontFamily: 'ppmond, sans-serif' }}>
+        <div className="flex justify-between items-end text-xs">
+            <div className="space-y-1">
+                <div className="text-gray-500">01</div>
                 <a href="#works" className="hover:text-pink-700 hover:transition-colors" onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' });
                 }}>WORKS</a>
             </div>
             
-            <div class="space-y-1">
-                <div class="text-gray-500">02</div>
+            <div className="space-y-1">
+                <div className="text-gray-500">02</div>
                 <a href="#aboutme" className="hover:text-pink-700 hover:transition-colors" onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('aboutme')?.scrollIntoView({ behavior: 'smooth' });
                 }}>ABOUT</a>
             </div>
             
-            <div class="space-y-1">
-                <div class="text-gray-500">03</div>
+            <div className="space-y-1">
+                <div className="text-gray-500">03</div>
                 <a href="" className="hover:text-pink-700 hover:transition-colors" onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}>CONTACT</a>
             </div>
             
-            <div class="space-y-1">
-                <div class="text-gray-500">04</div>
+            <div className="space-y-1">
+                <div className="text-gray-500">04</div>
                 <a href="" className="hover:text-pink-700 hover:transition-colors">ROADMAP</a>
             </div>
-            <div class="text-right">
+            <div className="text-right">
                 <div>©2025</div>
             </div>
         </div>

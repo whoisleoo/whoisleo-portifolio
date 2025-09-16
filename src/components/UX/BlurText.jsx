@@ -130,3 +130,5 @@ export default BlurText;
 //   onAnimationComplete={handleAnimationComplete}
 //   className="text-2xl mb-8"
 // />
+
+// CREDITOS REACT BITS
