@@ -1,49 +1,62 @@
-import HoverEffect from "./HoverEffect"
-import Iridescence from "./WorkBackground"
-import { useTheme } from "../context/ThemeContext"
+import HoverEffect from "./HoverEffect";
+import Iridescence from "./WorkBackground";
+import { useTheme } from "../context/ThemeContext";
 
 function Work() {
-    const { isDark, toggleTheme } = useTheme();
-    const meusProjetos = [
-        {
-            id: 1,
-            author: "WHOISLEO",
-            title: "TASK-HUB",
-            description: "TASK-HUB IS A COMPLETE TASK MANAGEMENT SYSTEM DEVELOPED WITH ELECTRON. IT OFFERS A MODERN AND INTUITIVE INTERFACE TO ORGANIZE PROJECTS AND INCREASE YOUR PRODUCTIVITY.",
-            color: [0.2, 0.8, 1],
-            link: "https://github.com/whoisleoo/Electron-Todo-List"
-        },
-        {
-            id: 2,
-            author: "WHOISLEO AND RENDER",
-            title: "CODDUO-OS",
-            description: "CODDUO-OS IS A CUSTOMIZED ARCH-LINUX DISTRIBUTION WITH ARCHISO OPTIMIZED FOR DEVELOPERS WHO WANT TO TEST PROGRAM INTERFACES WITHOUT DEPENDING ON COMPUTER POWER.",
-            color: [0.8, 0.2, 1],
-            link: "https://github.com/whoisleoo/CODDUO_OS"
-        },
-         {
-            id: 3,
-            author: "WHOISLEO",
-            title: "MARKETPLACE",
-            description: "E-COMMERCE PLATFORM UNDER DEVELOPMENT WITH REACT, NODE.JS AND POSTGREESQL.",
-            color: [5, 0.7, 0.2],
-            link: "https://github.com/whoisleoo/marketplace-model"
-        },
-         {
-            id: 4,
-            author: "WHOISLEO",
-            title: "PORTIFOLIO",
-            description: "PERSONAL PORTFOLIO DEVELOPED IN REACT AND TAILWIND FOR STORAGE OF PROJECTS AND PERSONAL KNOWLEDGE.",
-            color: [0.6, 0.2, 0.3],
-            link: "https://github.com/whoisleoo/whoisleo-portifolio"
-        }
-    ];
+  const { isDark, toggleTheme } = useTheme();
+  const meusProjetos = [
+    {
+      id: 1,
+      author: "WHOISLEO",
+      title: "TASK-HUB",
+      description:
+        "TASK-HUB IS A COMPLETE TASK MANAGEMENT SYSTEM DEVELOPED WITH ELECTRON. IT OFFERS A MODERN AND INTUITIVE INTERFACE TO ORGANIZE PROJECTS AND INCREASE YOUR PRODUCTIVITY.",
+      color: [0.2, 0.8, 1],
+      link: "https://github.com/whoisleoo/Electron-Todo-List",
+    },
+    {
+      id: 2,
+      author: "WHOISLEO AND RENDER",
+      title: "CODDUO-OS",
+      description:
+        "CODDUO-OS IS A CUSTOMIZED ARCH-LINUX DISTRIBUTION WITH ARCHISO OPTIMIZED FOR DEVELOPERS WHO WANT TO TEST PROGRAM INTERFACES WITHOUT DEPENDING ON COMPUTER POWER.",
+      color: [0.8, 0.2, 1],
+      link: "https://github.com/whoisleoo/CODDUO_OS",
+    },
+    {
+      id: 3,
+      author: "WHOISLEO",
+      title: "MARKETPLACE",
+      description:
+        "E-COMMERCE PLATFORM UNDER DEVELOPMENT WITH REACT, NODE.JS AND POSTGREESQL.",
+      color: [5, 0.7, 0.2],
+      link: "https://github.com/whoisleoo/marketplace-model",
+    },
+    {
+      id: 4,
+      author: "WHOISLEO",
+      title: "ENCURTADOR URL",
+      description:
+        "A basic URL shortener that turns any link into a custom named URL.",
+      color: [0.4, 1, 0.4],
+      link: "https://github.com/whoisleoo/encurtador_url",
+    },
+    {
+      id: 5,
+      author: "WHOISLEO",
+      title: "PORTIFOLIO",
+      description:
+        "PERSONAL PORTFOLIO DEVELOPED IN REACT AND TAILWIND FOR STORAGE OF PROJECTS AND PERSONAL KNOWLEDGE.",
+      color: [0.6, 0.2, 0.3],
+      link: "https://github.com/whoisleoo/whoisleo-portifolio",
+    },
+  ];
 
     return (
         <>
            <section id="works" className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen py-20 px-6 relative overflow-hidden`}>
                 <div className={`mb-20 text-center py-12 ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
-                    <h2 style={{ fontFamily: 'ppmond, sans-serif' }}> 
+                    <h2 style={{ fontFamily: 'ppmond, sans-serif' }}>
                         -SELECTED WORK-
                     </h2>
                 </div>
@@ -98,4 +111,4 @@ function Work() {
     )
 }
 
-export default Work
+export default Work;
