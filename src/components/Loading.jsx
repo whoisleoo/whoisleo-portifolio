@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useTheme } from "../context/ThemeContext";
 
 function Loading({ onComplete }) {
     const [percentage, setPercentage] = useState(0);
+    const { isDark, toggleTheme } = useTheme();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -21,10 +23,10 @@ function Loading({ onComplete }) {
     }, [onComplete]);
 
     return (
-        <div className="fixed inset-0 bg-black z-50 flex items-end justify-end">
+        <div className={`fixed inset-0 ${isDark ? "bg-black text-white" : "bg-white text-black"} z-50 flex items-end justify-end`}>
             <div className="p-8 ">
                 <span
-                    className="text-white text-9xl font-bold"
+                    className="text-9xl font-bold"
                     style={{ fontFamily: 'ppmond, sans-serif' }}
                 >
                     {percentage === 100 ? 'Welcome!' : `${percentage}%`}
