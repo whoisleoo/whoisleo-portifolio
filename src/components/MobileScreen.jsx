@@ -7,8 +7,8 @@ function MobileScreen() {
 
     return (
         <>
-             <div className="min-h-screen bg-black flex items-center justify-center p-8 ">
-                 <div className="text-center text-white max-w-md">
+             <div className={`min-h-screen ${isDark ? "bg-black" : "bg-white"} flex items-center justify-center p-8 `}>
+                 <div className={`text-center ${isDark ? "text-white" : "text-black"} max-w-md`}>
                  <h1 className="text-7xl font-bold mb-4" style={{ fontFamily: 'Roxborough, sans-serif' }}>
                     SORRY
                     </h1>
@@ -17,7 +17,7 @@ function MobileScreen() {
                </p>
 
                <div className="flex justify-center">
-                   <img src="/gatotriste.gif" alt="Gato triste" className="w-20 h-20 opacity-80" />
+                   <img src="/gatotriste.gif" alt="Gato triste" className="w-25 h-25 opacity-80" />
                </div>
 
 
