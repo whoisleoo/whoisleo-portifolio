@@ -1,6 +1,7 @@
 import HoverEffect from "./HoverEffect"
 import { useTheme } from "../context/ThemeContext"
-import TiltedCard from "./TiltedCard";
+import TiltedCard from "./TiltedCard"
+import FadeContent from "./UX/FadeContent"
 
 function Work() {
     const { isDark, toggleTheme } = useTheme();
@@ -8,11 +9,13 @@ function Work() {
     return (
         <>
           <section className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen py-40 px-6 relative overflow-hidden`}>
+            <FadeContent delay={300} duration={1000}>
             <div className="text-center mb-60">
                 <h2 className={`text-sm tracking-wider ${isDark ? 'text-gray-400' : 'text-gray-600'}`} style={{ fontFamily: 'ppmond, sans-serif' }}>
                     -ABOUT ME-
                 </h2>
             </div>
+            </FadeContent>
 
             <div className="relative mb-80 overflow-hidden" id="aboutme">
                 <HoverEffect>
@@ -43,6 +46,7 @@ function Work() {
 
             <div className="max-w-6xl mx-auto">
                 
+                <FadeContent delay={800} duration={1200}>
                 <div className="text-center mb-15">
                     <div className="flex justify-center items-baseline gap-8 relative">
                         <HoverEffect>
@@ -62,9 +66,11 @@ function Work() {
                         </div>
                     </div>
                 </div>
+                </FadeContent>
 
 
                 <div className="grid grid-cols-2 gap-10 items-center ml-10">
+                    <FadeContent delay={1200} duration={1500} blur={true}>
                     <div className="flex justify-center hover:cursor-none hover:saturate-150 transition-all duration-300">
                         <TiltedCard
                             imageSrc="/eudevdd.jpg"
@@ -81,8 +87,10 @@ function Work() {
                             displayOverlayContent={false}
                         />
                     </div>
+                    </FadeContent>
 
                     <div className="pt-16">
+                        <FadeContent delay={1400} duration={1200}>
                         <div className="space-y-8">
                             <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed text-xl`}>
                                 I'm an artist and full-stack developer. I started my career with the sole goal of transforming my code into art.
@@ -97,6 +105,8 @@ function Work() {
                                 ~ Me
                             </p>
                         </div>
+                        </FadeContent>
+                        <FadeContent delay={1800} duration={1000}>
                         <div className="pt-30 flex justify-end">
                             <HoverEffect>
                                 <button className={`group flex items-center gap-3 border ${isDark ? 'border-white/30 hover:border-white/60' : 'border-black/30 hover:border-black/60'} rounded-3xl px-8 py-4 transition-all duration-300`}>
@@ -107,6 +117,7 @@ function Work() {
                                 </button>
                             </HoverEffect>
                         </div>
+                        </FadeContent>
                     </div>
                 </div>
             </div>

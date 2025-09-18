@@ -1,6 +1,8 @@
 import HoverEffect from "./HoverEffect";
 import Iridescence from "./WorkBackground";
 import { useTheme } from "../context/ThemeContext";
+import FadeContent from "./UX/FadeContent";
+import AnimatedContent from "./UX/AnimatedContent";
 
 function Work() {
   const { isDark, toggleTheme } = useTheme();
@@ -55,14 +57,26 @@ function Work() {
     return (
         <>
            <section id="works" className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen py-20 px-6 relative overflow-hidden`}>
+                <AnimatedContent
+                    distance={80}
+                    direction="vertical"
+                    duration={1}
+                    delay={300}
+                >
                 <div className={`mb-20 text-center py-12 ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
                     <h2 style={{ fontFamily: 'ppmond, sans-serif' }}>
                         -SELECTED WORK-
                     </h2>
                 </div>
+                </AnimatedContent>
 
                 <div className="max-w-6xl mx-auto space-y-32 px-8">
                     {meusProjetos.map((project, index) => (
+                        <FadeContent
+                            delay={200 + (index * 300)}
+                            duration={1200}
+                            threshold={0.2}
+                        >
                         <HoverEffect key={project.id}>
                         <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative block">
                             <div className="group cursor-pointer">
@@ -102,6 +116,7 @@ function Work() {
                             </div>
                         </a>
                         </HoverEffect>
+                        </FadeContent>
                     ))}
                 </div>
 

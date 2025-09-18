@@ -1,6 +1,7 @@
 import HoverEffect from "./HoverEffect"
 import { useTheme } from "../context/ThemeContext"
-
+import TiltedCard from "./TiltedCard"
+import FadeContent from "./UX/FadeContent"
 function HeroBackground() {
 
     const { isDark, toggleTheme } = useTheme();
@@ -19,6 +20,7 @@ function HeroBackground() {
     
     <>
       <div className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen w-full overflow-hidden`}>
+        <FadeContent delay={200} duration={1000}>
         <header className="absolute top-0 left-0 right-0 z-50 p-2 m-10">
         <div className="flex justify-between items-start">
             <div className="text-xs flex items-start gap-2" style={{ fontFamily: 'ppmond, sans-serif' }}>
@@ -49,7 +51,7 @@ function HeroBackground() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                         </svg>
                     )}
-                    
+
                 </button>
                 <div style={{ fontFamily: 'ppmond, sans-serif' }}>
                     Folio
@@ -60,35 +62,53 @@ function HeroBackground() {
             </div>
         </div>
         </header>
+        </FadeContent>
 
 
 
 
         <main className="h-screen w-full flex flex-col justify-center items-center relative">
             <HoverEffect>
-            <div className="absolute inset-0 flex justify-center items-center">
-               <img src={`${isDark ? "./logo2.svg" : "./logo2white.svg"}`}  className="w-120 h-120 rainbow opacity-80"  alt="Background"/>
-            </div>
-            </HoverEffect>
-
+            <FadeContent delay={1500} duration={2000} blur={true}>
+            <div className="absolute inset-0 flex justify-center items-center duratio-500">
+                  <div className="hover:cursor-none rainbow">
+                           <TiltedCard
+                               imageSrc={`${isDark ? "./logo2.svg" : "./logo2white.svg"}`}
+                               altText="Leonardo Marconato"
+                               captionText="STOP TOUCHING ME!"
+                               containerHeight="880px"
+                               containerWidth="1950px"
+                               imageHeight="520px"
+                               imageWidth="520px"
+                               rotateAmplitude={5}
+                               scaleOnHover={1}
+                               showMobileWarning={false}
+                               showTooltip={false}
+                               displayOverlayContent={true}
+                               overlayContent={
     <div className="text-center relative z-10 w-full flex flex-col items-center">
-        <HoverEffect>
         <h1 className="text-9xl mb-4 leading-none font-normal" style={{ fontFamily: 'Roxborough, sans-serif' }}>
             LEONARDO
         </h1>
-        </HoverEffect>
-        
-        <HoverEffect>
+
         <h1 className="text-9xl leading-none font-normal" style={{ fontFamily: 'SKCuberOut, sans-serif' }}>
             MARCONATO
         </h1>
-        </HoverEffect>
     </div>
+  }
+                           />
+                   </div>
+            </div>
+            </FadeContent>
+            </HoverEffect>
+
+    
 </main>
 
 
 
 
+<FadeContent delay={400} duration={1200}>
 <footer className="absolute bottom-0 left-0 right-0 z-50 m-5 p-7" style={{ fontFamily: 'ppmond, sans-serif' }}>
         <div className="flex justify-between items-end text-xs">
             <div className="space-y-1">
@@ -98,7 +118,7 @@ function HeroBackground() {
                     document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' });
                 }}>WORKS</a>
             </div>
-            
+
             <div className="space-y-1">
                 <div className="text-gray-500">02</div>
                 <a href="#aboutme" className="hover:text-pink-700 hover:transition-colors" onClick={(e) => {
@@ -106,7 +126,7 @@ function HeroBackground() {
                     document.getElementById('aboutme')?.scrollIntoView({ behavior: 'smooth' });
                 }}>ABOUT</a>
             </div>
-            
+
             <div className="space-y-1">
                 <div className="text-gray-500">03</div>
                 <a href="" className="hover:text-pink-700 hover:transition-colors" onClick={(e) => {
@@ -114,7 +134,7 @@ function HeroBackground() {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}>CONTACT</a>
             </div>
-            
+
             <div className="space-y-1">
                 <div className="text-gray-500">04</div>
                 <a href="" className="hover:text-pink-700 hover:transition-colors">ROADMAP</a>
@@ -124,6 +144,7 @@ function HeroBackground() {
             </div>
         </div>
     </footer>
+    </FadeContent>
 
       </div>
     </>

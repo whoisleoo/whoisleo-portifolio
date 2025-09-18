@@ -1,6 +1,7 @@
 import HoverEffect from "./HoverEffect"
 import { useTheme } from "../context/ThemeContext"
-import Dither from "./DitherBackground";
+import Dither from "./DitherBackground"
+import FadeContent from "./UX/FadeContent"
 
 function ContactMe() {
     const { isDark, toggleTheme } = useTheme();
@@ -56,6 +57,7 @@ function ContactMe() {
         return(
             <>
                 <section className={`min-h-screen pt-60 pb-40 px-6 relative overflow-hidden ${isDark ? "bg-black text-white" : "bg-white text-black"}`}>
+                    <FadeContent delay={300} duration={1000}>
                     <div className="text-center mb-70" id="contact">
                          <HoverEffect>
                         <h2 className={`text-sm tracking-wider ${isDark ? 'text-gray-400' : 'text-gray-600'}`} style={{ fontFamily: 'ppmond, sans-serif' }}>
@@ -63,28 +65,29 @@ function ContactMe() {
                         </h2>
                         </HoverEffect>
                     </div>
+                    </FadeContent>
 
+                    <FadeContent delay={600} duration={1200}>
                     <div className="mb-16 flex justify-center">
                         <div className="relative">
                             <HoverEffect>
                             <div className={`text-lg tracking-wider ${isDark ? 'text-gray-400' : 'text-gray-600'} absolute -top-8 left-0`} style={{ fontFamily: 'SKCuber, sans-serif' }}>
-                               //DON'T BE SHY 
-                               
+                               //DON'T BE SHY
+
                             </div>
                             </HoverEffect>
-                            
+
                             <div className="flex items-center gap-4">
                                 <img src={`${isDark ? "/asterisco.svg" : "/asteriscopreto.svg"}`} className="w-10 h-10 mr-3">
                                 </img>
-                                <HoverEffect>
                                 <h1 className="text-7xl " style={{ fontFamily: 'Roxborough, sans-serif' }}>
                                     CONTACT ME
                                 </h1>
-                                </HoverEffect>
                             </div>
-                            
+
                         </div>
                     </div>
+                    </FadeContent>
 
                     <div className="max-w-6xl mx-auto">
                         <div className="w-full mb-8">
@@ -95,6 +98,7 @@ function ContactMe() {
                         </div>
 
                         <div className="grid grid-cols-2 items-start">
+                            <FadeContent delay={1000} duration={1000}>
                             <div>
                                 {links.map((link, index) => (
                                     <div key={index} className="mb-4" style={{ fontFamily: 'Disket, sans-serif' }}>
@@ -124,7 +128,9 @@ function ContactMe() {
                                     </div>
                                 ))}
                             </div>
+                            </FadeContent>
 
+                            <FadeContent delay={1200} duration={1500} blur={true}>
                             <div className="flex justify-end">
                                 <div className={`rainbow rounded-lg overflow-hidden ${isDark ? 'bg-black' : 'bg-white'}`} style={{ width: '500px', height: '384px', position: 'relative',}}>
                                     <Dither
@@ -140,6 +146,7 @@ function ContactMe() {
                                     />
                                 </div>
                             </div>
+                            </FadeContent>
 
                         </div>
 
