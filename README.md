@@ -23,4 +23,4 @@ e diversos componentes do  **<a href="https://reactbits.dev/">𝐑𝐞𝐚𝐜�
 <br>
 ---
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=c8e5eb&height=80&section=footer"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=4169e1&height=80&section=footer"/>
