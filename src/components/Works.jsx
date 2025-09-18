@@ -46,7 +46,7 @@ function Work() {
     {
       id: 5,
       author: "WHOISLEO",
-      title: "PORTIFOLIO",
+      title: "PORTFOLIO",
       description:
         "PERSONAL PORTFOLIO DEVELOPED IN REACT AND TAILWIND FOR STORAGE OF PROJECTS AND PERSONAL KNOWLEDGE.",
       color: [0.6, 0.2, 0.3],
