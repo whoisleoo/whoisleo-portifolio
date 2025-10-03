@@ -137,7 +137,7 @@ function HeroBackground() {
 
             <div className="space-y-1">
                 <div className="text-gray-500">04</div>
-                <a href="" className="hover:text-pink-700 hover:transition-colors">ROADMAP</a>
+                <a href="" onclick={alert("Work in Progress")} className="hover:text-pink-700 hover:transition-colors">ROADMAP</a>
             </div>
             <div className="text-right">
                 <div>©2025</div>
