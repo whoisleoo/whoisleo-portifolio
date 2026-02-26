@@ -52,6 +52,15 @@ function Work() {
       color: [0.6, 0.2, 0.3],
       link: "https://github.com/whoisleoo/whoisleo-portifolio",
     },
+     {
+      id: 5,
+      author: "WHOISLEO",
+      title: "CAMPO GUIA",
+      description:
+        "FULLSTACK HORARY SEARCH PROJECT FOR MY COLLEGE,
+      color: [5, 0.7, 0.2],
+      link: "https://github.com/whoisleoo/Campo-Guia",
+    },
   ];
 
     return (
