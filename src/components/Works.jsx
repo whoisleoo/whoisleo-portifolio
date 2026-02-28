@@ -57,7 +57,7 @@ function Work() {
       author: "WHOISLEO",
       title: "CAMPO GUIA",
       description:
-        "FULLSTACK HORARY SEARCH PROJECT FOR MY COLLEGE,
+        "FULLSTACK HORARY SEARCH PROJECT FOR MY COLLEGE",
       color: [5, 0.7, 0.2],
       link: "https://github.com/whoisleoo/Campo-Guia",
     },
