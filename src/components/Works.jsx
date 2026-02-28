@@ -53,7 +53,7 @@ function Work() {
       link: "https://github.com/whoisleoo/whoisleo-portifolio",
     },
      {
-      id: 5,
+      id: 6,
       author: "WHOISLEO",
       title: "CAMPO GUIA",
       description:
