@@ -61,6 +61,15 @@ function Work() {
       color: [5, 0.7, 0.2],
       link: "https://github.com/whoisleoo/Campo-Guia",
     },
+     {
+      id: 7,
+      author: "WHOISLEO",
+      title: "TUX VAULT",
+      description:
+        "The Google Drive alternative for personal Linux servers. Built for privacy-first file management.",
+        color: [0, 0, 0.5],
+      link: "https://tuxvault.online/",
+    },
   ];
 
     return (
